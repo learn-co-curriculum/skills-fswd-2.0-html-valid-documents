@@ -123,14 +123,13 @@ that these and future pages will be displayed properly across browsers, with no 
 is to validate! The most common validators you’ll use are:
 
 * [Validator.nu](https://html5.validator.nu/): A new-school validator that validates HTML5,
-ARIA, SVG 1.1 and MathML 2.0, it checks the entire document pointing out places where your
-markup doesn’t follow that doctype correctly (i.e., where there are errors). This is the
-one we recommend if you are using the HTML5 doctype, also highly recommended. 
+ARIA, SVG 1.1 and MathML 2.0. It searches for errors based on the doctype selected. This is 
+highly recommended if you are using the HTML5 doctype.
 
 * [The W3C MarkUp Validator](https://validator.w3.org/): This looks at the (X)HTML doctype
-for the document you want to check, and then validates your markup accordingly. This is
-the one we recommend if you are using an HTML4 or XHTML1.x doctype. It does validate HTML5,
-but validator.nu is arguably more up to date.
+for the document you want to check, and then validates your markup accordingly. This validates 
+HTML5, is arguably not as up to date as Validator.nu. It might be better if you are using an
+HTML4 or XHTML1.x doctype.
 
 * [The W3C Link Checker](https://validator.w3.org/checklink): This checks a document, and
 tests all the links to make sure they are not broken (e.g., that the `<href>` values point
