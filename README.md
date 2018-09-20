@@ -49,6 +49,7 @@ What looks most familiar to many are HTML documents that contain the `html`,
   </body>
 </html>
 ```
+
 When working in `iframes` only the bare minimum markup is needed for validation. 
 
 ##### Other Invalid HTML Consist of the Following Cases: 
@@ -105,7 +106,7 @@ looks fine in browsers, it doesn’t matter if it doesn’t validate. They descr
 as an ideal goal, but not something that is a black-and-white issue.
 
 * A valid document is correctly and more consistently displayed by browsers.
-* Invalid HTML code can trigger bugs hard to targe.
+* Invalid HTML code can trigger bugs hard to target.
 * A valid document is easier to maintain by all parties.
 * Some invalid documents can cause errors that lead to poor website performance. 
 * Invalid markup can lead to poorer accessibility.
@@ -114,7 +115,6 @@ Developers are not always perfect, and mistakes will be made in the code code.
 Web pages will be higher quality if the mistakes are weeded out. In the future, browsers will
 inevitably change. It is likely that browsers will be less, not more, forgiving when parsing
 invalid code.
-
 
 ## What are Accepted Sources for HTML Validation?
 
@@ -141,6 +141,43 @@ document and verifies that the CSS follows the specs properly.
 In order to validate put the URL or copy and paste the markup into a validator and address and
 use the error messages to debug and clean up your code.
 
+## Optional Tags
+
+With the introduction of HTML5, some tags including `html`, `head`, and `body` have been made 
+optional. That means an example like this:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World!</title>
+    <meta name="description" content="A Basic HTML Document">
+  </head>
+  <body>
+    <p>Hello World!</p>
+  </body>
+</html>
+```
+
+...would still be considered valid if rewritten like this:
+
+```html
+<!DOCTYPE html>
+  <meta charset="utf-8">
+  <title>Hello World!</title>
+  <meta name="description" content="A Basic HTML Document">
+
+  <p>Hello World!
+  <!-- Side Note: the closing `p` tag is also optional and has been removed here -->
+```
+
+Google even suggests removing these optional tags in their [HTML and CSS styleguide][google], 
+as extra characters means extra bytes of data being served to users.
+
+For most examples in our lessons and labs, we will continue to use the optional `html`,`head`
+and `body` tags to make it easier to identify different parts of an HTML document. 
+
 ## Conclusion
 
 When coding, it can be easy to make mistakes. Even when the document looks visually correct
@@ -153,3 +190,5 @@ improve website performance and stability.
 
 * [Invalid Markup Examples](https://www.w3.org/2005/Talks/0908-wcag/Table_7b.html)
 * [HTML Validation](https://webplatform.github.io/docs/guides/html_validation/)
+
+[google]: https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags
