@@ -94,7 +94,7 @@ Markup that is written in a way that the author's intent is unclear also invalid
 <h1>Hello World!</h2>
 ```
 In this case, the browser would not be able to interpret if it should render an `h1` 
-or an `h2` based on this sytax.
+or an `h2` based on this syntax.
 
 Typos in tags and attributes would also be invalid:
 ```<heder> instead of </header>```
